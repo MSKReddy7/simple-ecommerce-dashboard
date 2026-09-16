@@ -20,7 +20,6 @@ const Login = () =>
  
         const UserRegistredData = localStorage.getItem(username);
 
-
         if (UserRegistredData!=null)
         {
             const userData = JSON.parse(UserRegistredData);
@@ -33,13 +32,13 @@ const Login = () =>
             }
             else
             {
-                setMessage("Login failed wrong password/user-type ❌");
+                setMessage("Login failed wrong credentials ❌");
                 setShowMessage(true);
             }
         }
         else
         {
-            setMessage("Login failed wrong username ❌");
+            setMessage("Login failed wrong credentials ❌");
             setShowMessage(true);
         }
     };
